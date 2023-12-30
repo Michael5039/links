@@ -1,0 +1,169 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.app-header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%; /* 或根据设计调整 */
+}
+
+.profile-item {
+    text-align: center;
+}
+
+.avatar {
+    display: block;
+    width: 60px; /* 根据设计调整 */
+    height: 60px; /* 根据设计调整 */
+    border-radius: 50%; /* 圆形头像 */
+    margin: 0 auto;
+}
+
+.avatar-label {
+    display: block;
+    margin-top: 8px; /* 根据设计调整 */
+    font-size: 14px; /* 根据设计调整 */
+    color: #333; /* 根据设计调整 */
+}
+
+.app-body {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 根据设计图中的列数调整 */
+    grid-gap: 10px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* 根据设计图调整 */
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/* 根据设计图的颜色调整以下颜色值 */
+.blue { background-color: #3498db; }
+.green { background-color: #2ecc71; }
+.orange { background-color: #f39c12; }
+.red { background-color: #e74c3c; }
+/* 更多颜色 */
+
+
+/* 顶部广告start */
+/* 顶部广告栏样式 */
+.top-ad {
+    background-color: #f7f7f7;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.top-ad-content {
+    /*max-width: 1200px;*/
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.top-ad-text {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+.top-ad-buy {
+    font-size: 16px;
+    color: #007bff; /* 链接颜色 */
+    cursor: pointer;
+}
+
+.top-ad-divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-top: 10px;
+}
+/* 顶部广告end */
+
+
+.recommendation-section {
+    margin: 20px auto;
+    padding: 10px;
+    width: 95%; /* 根据实际设计调整 */
+}
+
+.section-title {
+    text-align: left;
+    font-size: 24px; /* 根据实际设计调整 */
+    color: #333; /* 根据实际设计调整 */
+    margin-bottom: 15px; /* 根据实际设计调整 */
+}
+
+.divider {
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.recommendation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* 根据实际设计调整 */
+    gap: 15px; /* 根据实际设计调整 */
+}
+
+.recommendation-item {
+    background-color: #f7f7f7; /* 根据实际设计调整 */
+    border-radius: 10px; /* 根据实际设计调整 */
+    padding: 20px; /* 根据实际设计调整 */
+    text-align: center;
+    font-size: 18px; /* 根据实际设计调整 */
+    color: #333; /* 根据实际设计调整 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 给予轻微的阴影效果 */
+    transition: transform 0.3s; /* 添加一个过渡效果 */
+}
+
+.recommendation-item:hover {
+    transform: translateY(-5px); /* 鼠标悬停时提升效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 加深阴影效果 */
+}
+
+/* ...后面的代码... */
+
+/* 响应式布局调整 */
+@media (max-width: 768px) {
+    .app-body {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .profile-section {
+        flex-direction: column;
+    }
+    .profile-item {
+        margin-bottom: 15px;
+    }
+
+    .recommendation-grid {
+        grid-template-columns: repeat(2, 1fr); /* 在小屏幕上调整为两列 */
+    }
+}
